@@ -28,7 +28,7 @@
 }
 
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{
   margin:0;padding:0 0 8px;background:var(--paper);color:var(--ink);
   font:17px/1.62 var(--sans);
@@ -64,10 +64,11 @@ code,kbd,pre{font-family:var(--mono)}
 .masthead{padding-top:20px}
 .masthead-top{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:end;padding-bottom:10px}
 .dateline,.imprint{font:11.5px/1.5 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin:0;max-width:none}
+.nb{white-space:nowrap}
 .imprint{text-align:right}
-.brand{font-family:var(--serif);font-size:clamp(24px,4.2vw,44px);letter-spacing:.2em;word-spacing:.18em;text-transform:uppercase;text-align:center;line-height:1;text-wrap:balance}
+.brand{margin:0;font-family:var(--serif);font-size:clamp(24px,4.2vw,44px);letter-spacing:.2em;word-spacing:.18em;text-transform:uppercase;text-align:center;line-height:1;text-wrap:balance}
 .brand span{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.34em;color:var(--ink-3);margin-top:8px}
-.brand a{color:inherit;text-decoration:none}
+.brand a{display:block;color:inherit;text-decoration:none}
 
 .rule-nav{display:flex;flex-wrap:wrap;gap:6px 26px;padding:13px 0;font:12px/1.4 var(--mono);letter-spacing:.18em;text-transform:uppercase}
 .rule-nav a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px}
@@ -93,7 +94,7 @@ h1.lead-title em{display:block;font-style:italic;color:var(--vermilion)}
 .ledger .hot b{color:var(--vermilion)}
 
 /* ------------------------------------------------------- dispatch slip */
-.slip{margin:clamp(30px,4.6vw,54px) 0;background:var(--paper-2);border:1px solid var(--rule);
+.slip{margin:48px 0;background:var(--paper-2);border:1px solid var(--rule);
   box-shadow:var(--shadow);position:relative;overflow:hidden}
 .slip::before{content:"";position:absolute;inset:10px;border:1px dashed var(--rule);pointer-events:none}
 .slip-inner{display:grid;grid-template-columns:1.55fr .9fr;gap:0}
@@ -119,7 +120,7 @@ h1.lead-title em{display:block;font-style:italic;color:var(--vermilion)}
 .btn[hidden]{display:none}
 
 /* ------------------------------------------------------------ plates */
-.plates{padding:clamp(26px,3.6vw,44px) 0 6px}
+.plates{padding:48px 0 4px}
 .plates-head{display:flex;align-items:baseline;gap:18px;margin-bottom:26px}
 .plates-head h2{font-size:clamp(22px,2.6vw,30px)}
 .plates-head .numeral{font:12px/1 var(--mono);letter-spacing:.22em;color:var(--vermilion);border:1px solid var(--vermilion);padding:5px 8px}
@@ -132,7 +133,7 @@ h1.lead-title em{display:block;font-style:italic;color:var(--vermilion)}
 .plate p{font-size:15.5px;color:var(--ink-2);margin-bottom:.9em}
 
 /* ------------------------------------------------------------- annex */
-.annex{margin:clamp(28px,4vw,48px) 0;border-top:2px solid var(--ink);padding-top:22px;
+.annex{margin:48px 0;border-top:2px solid var(--ink);padding-top:22px;
   display:grid;grid-template-columns:.9fr 1.5fr;gap:34px}
 .annex h2{font-size:clamp(22px,2.6vw,30px);margin-bottom:12px}
 .annex .note{font-size:15.5px;color:var(--ink-2)}
@@ -141,7 +142,7 @@ h1.lead-title em{display:block;font-style:italic;color:var(--vermilion)}
 .annex dd{margin:0;font-size:15.5px;color:var(--ink-2);border-bottom:1px solid var(--rule-soft);padding-bottom:10px}
 
 /* -------------------------------------------------------- smallprint */
-.smallprint{display:grid;grid-template-columns:repeat(2,1fr);gap:34px;padding:clamp(26px,3.6vw,42px) 0 10px;border-top:1px solid var(--rule)}
+.smallprint{display:grid;grid-template-columns:repeat(2,1fr);gap:34px;padding:48px 0 8px;border-top:1px solid var(--rule)}
 .smallprint h2{font-size:22px;margin-bottom:10px}
 .smallprint p{font-size:15.5px;color:var(--ink-2);margin-bottom:.9em}
 
@@ -173,6 +174,7 @@ h1.lead-title em{display:block;font-style:italic;color:var(--vermilion)}
 .entry h2 a{color:var(--ink);text-decoration:none}
 .entry h2 a:hover{color:var(--vermilion)}
 .entry .excerpt{font-size:15.5px;color:var(--ink-2);margin:0 0 12px;max-width:64ch}
+time{font-variant-numeric:tabular-nums}
 .entry .meta{font:11.5px/1.7 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:6px 18px;margin:0}
 .entry .meta>*{white-space:nowrap}
 .entry .points{color:var(--vermilion);font-weight:600}
@@ -187,7 +189,7 @@ h1.lead-title em{display:block;font-style:italic;color:var(--vermilion)}
 .article-head .byline>*{white-space:nowrap}
 .standfirst-serif{font-family:var(--serif);font-size:clamp(17px,1.9vw,21px);line-height:1.52;color:var(--ink-2);margin:22px 0 0;max-width:58ch}
 
-.plate-figure{margin:clamp(26px,4vw,44px) 0;border:1px solid var(--rule);background:var(--paper-2);box-shadow:var(--shadow)}
+.plate-figure{margin:44px 0;border:1px solid var(--rule);background:var(--paper-2);box-shadow:var(--shadow)}
 .plate-figure svg{display:block;width:100%;height:auto}
 .plate-figure figcaption{padding:12px 18px;line-height:1.75;border-top:1px solid var(--rule-soft);font:11.5px/1.6 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
 
@@ -203,15 +205,15 @@ h1.lead-title em{display:block;font-style:italic;color:var(--vermilion)}
 .marginalia{font:12.5px/1.65 var(--mono);color:var(--ink-3);border-top:1px solid var(--rule);padding-top:14px}
 .marginalia h2{font:12px/1.5 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--ink);margin:18px 0 8px;border:0;padding:0}
 .marginalia ol{margin:0;padding-left:18px}
-.marginalia li{margin-bottom:10px}
+.marginalia li{margin-bottom:10px;scroll-margin-top:20px}
 .marginalia a{text-decoration:none;border-bottom:1px solid var(--rule)}
 
-.controls{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:34px 0 0;padding-top:18px;border-top:1px solid var(--rule)}
+.controls{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:40px 0 0;padding-top:18px;border-top:1px solid var(--rule)}
 .controls a,.controls button{font:11.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);background:none;border:0;padding:6px 0;cursor:pointer;text-decoration:none}
 .controls a:hover,.controls button:hover{color:var(--vermilion);text-decoration:underline}
 .controls .status{font:11.5px/1 var(--mono);letter-spacing:.1em;color:var(--ink-3);text-transform:none}
 
-.notes{padding:clamp(30px,4.4vw,50px) 0 10px;margin-top:36px;border-top:2px solid var(--ink)}
+.notes{padding:36px 0 10px;margin-top:40px;border-top:2px solid var(--ink)}
 .notes h2{font-size:clamp(20px,2.4vw,26px);margin-bottom:22px}
 .note-row{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:18px 0;border-top:1px solid var(--rule-soft)}
 .note-row .who{font:11.5px/1.6 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin:0}
@@ -263,6 +265,7 @@ h1.lead-title em{display:block;font-style:italic;color:var(--vermilion)}
   *,*::before,*::after{animation:none !important;transition:none !important}
   .draw{transform:none}
   html{scroll-behavior:auto}
+  html{scroll-behavior:auto}
 }
 
 .copy-status{margin-top:14px}
@@ -276,7 +279,7 @@ p{text-wrap:pretty}
 .brand a,.plate h3 a,.entry h2 a{text-decoration:none}
 
 /* document marks: folio, ornament, footnote links */
-.orn{text-align:center;color:var(--vermilion);letter-spacing:.5em;font-size:15px;margin:30px 0 0;max-width:none}
+.orn{text-align:center;color:var(--vermilion);letter-spacing:.5em;font-size:15px;margin:40px 0 0;max-width:none}
 .fn{font-family:var(--mono);font-size:.62em;text-decoration:none;color:var(--vermilion);padding:0 .12em;vertical-align:super;line-height:0}
 .fn:hover{text-decoration:underline}
 .marginalia li:target{background:var(--vermilion-soft)}
@@ -305,6 +308,10 @@ p{text-wrap:pretty}
 }
 
 @media print{
+  @page{margin:18mm}
+  p{orphans:2;widows:2}
+  h1,h2,h3{break-after:avoid}
+  a[href^="https"]::after{content:" (" attr(href) ")";font-size:.78em;color:#333}
   body{background:#fff;background-image:none;color:#000}
   .rule-nav,.tabs,.controls,.guest-slip,.skip-link,.pager{display:none}
   a{color:#000}

@@ -39,10 +39,12 @@
       const isCurrent = tab.dataset.sort === current;
       if (isCurrent) tab.setAttribute('aria-current', 'true');
       else tab.removeAttribute('aria-current');
-      tab.addEventListener('click', () => {
+      tab.addEventListener('click', (event) => {
+        event.preventDefault();
         tabs.forEach((t) => t.removeAttribute('aria-current'));
         tab.setAttribute('aria-current', 'true');
         applySort(tab.dataset.sort);
+        if (history.replaceState) history.replaceState(null, '', tab.getAttribute('href'));
       });
     });
     applySort(current);
