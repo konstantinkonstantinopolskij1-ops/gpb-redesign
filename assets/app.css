@@ -61,7 +61,7 @@ html.js .will-reveal{opacity:0;transform:translateY(16px);transition:opacity .7s
 html.js .will-reveal.is-revealed{opacity:1;transform:none}
 
 .skip-link{
-  position:absolute;left:-9999px;top:0;z-index:100;
+  position:absolute;left:-9999px;top:0;z-index:100;display:inline-flex;align-items:center;min-height:44px;
   background:var(--signal);color:#0a1200;padding:12px 18px;border-radius:0 0 10px 0;
   font:600 14px/1 var(--font-mono);text-decoration:none
 }
@@ -121,11 +121,11 @@ html.js .will-reveal.is-revealed{opacity:1;transform:none}
   padding:22px 0 18px;border-bottom:1px solid var(--line);
   font:12.5px/1.2 var(--font-mono);letter-spacing:.13em;text-transform:uppercase;color:var(--muted)
 }
-.topbar .brand{display:flex;align-items:center;gap:10px;color:var(--text);text-decoration:none;letter-spacing:.2em}
+.topbar .brand{display:flex;align-items:center;gap:10px;color:var(--text);text-decoration:none;letter-spacing:.2em;padding:16px 0}
 .topbar .brand b{font-weight:600}
 .pulse{width:7px;height:7px;border-radius:50%;background:var(--signal);box-shadow:0 0 0 0 rgba(200,255,106,.7);animation:blink 3.2s ease-in-out infinite}
 .topbar nav{margin-left:auto;display:flex;gap:18px;flex-wrap:wrap}
-.topbar nav a{color:var(--muted);text-decoration:none}
+.topbar nav a{color:var(--muted);text-decoration:none;padding:16px 0}
 .topbar nav a:hover{color:var(--signal)}
 
 .counterbar{
@@ -209,12 +209,13 @@ section.block > p.lede{color:#c4cdda;font-size:17px;margin:0 0 10px}
 .route:nth-child(2) .route-label{color:var(--violet)}
 .route:nth-child(3) .route-label{color:var(--teal)}
 .route h3{margin:0 0 12px;font-size:22px}
-.route h3 a{text-decoration:none;color:var(--text)}
+.route h3 a{display:inline-block;padding:12px 0;text-decoration:none;color:var(--text)}
 .route h3 a:hover{color:var(--signal)}
 .route p{margin:0;color:#b8c1cf;font-size:15px;max-width:none}
 .route code{font:13px/1.5 var(--font-mono);color:#e9ffd0;background:rgba(0,0,0,.4);padding:2px 6px;border-radius:6px;overflow-wrap:anywhere}
 
 .terminal{
+  white-space:pre-wrap;word-break:break-word;
   margin:30px 0 0;padding:20px 22px;border-radius:var(--radius);
   border:1px solid var(--line);border-left:3px solid var(--signal);
   background:rgba(0,0,0,.45);color:#dff8bd;font:14px/1.7 var(--font-mono);overflow-wrap:anywhere
@@ -238,6 +239,7 @@ section.block > p.lede{color:#c4cdda;font-size:17px;margin:0 0 10px}
 
 footer.site-foot{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--muted-2);font:13px/1.7 var(--font-mono)}
 footer.site-foot p{max-width:70ch;margin:0 0 10px}
+footer.site-foot a{display:inline-block;padding:12px 0}
 
 /* ---------------------------------------------------------------- meatproxy feed */
 .feed-head{padding:clamp(40px,7vw,84px) 0 26px;border-bottom:1px solid var(--line)}
@@ -261,7 +263,7 @@ footer.site-foot p{max-width:70ch;margin:0 0 10px}
 .card .art{aspect-ratio:1;border-radius:var(--radius);border:1px solid var(--line);background:radial-gradient(120% 120% at 20% 10%,rgba(139,125,255,.35),transparent 60%),radial-gradient(120% 120% at 80% 90%,rgba(89,240,208,.3),transparent 62%),#0b0f1c;display:grid;place-items:center;overflow:hidden}
 .card .art svg{width:72%;height:72%}
 .card h2{margin:0 0 10px;font-size:clamp(20px,2.4vw,28px);line-height:1.16}
-.card h2 a{text-decoration:none;color:var(--text)}
+.card h2 a{display:inline-block;padding:12px 0;text-decoration:none;color:var(--text)}
 .card h2 a:hover{color:var(--signal)}
 .card p.excerpt{margin:0 0 14px;color:#c6cfdd;font-size:15.5px;max-width:70ch}
 .meta{display:flex;gap:8px 0;flex-wrap:wrap;font:12.5px/1.7 var(--font-mono);color:var(--muted)}
