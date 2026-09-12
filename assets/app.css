@@ -114,7 +114,7 @@ html.js .will-reveal.is-revealed{opacity:1;transform:none}
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 
 /* ---------------------------------------------------------------- shell */
-.shell{position:relative;z-index:1;width:min(100% - 40px,var(--shell));margin-inline:auto}
+.shell{position:relative;z-index:1;width:min(100% - 56px,var(--shell));margin-inline:auto}
 
 .topbar{
   display:flex;align-items:center;gap:16px;flex-wrap:wrap;
@@ -144,10 +144,10 @@ html.js .will-reveal.is-revealed{opacity:1;transform:none}
 
 h1.hero-title{
   font-size:clamp(46px,9.2vw,116px);
-  line-height:.94;letter-spacing:-.045em;margin:0 0 30px;max-width:16ch
+  line-height:.99;letter-spacing:-.045em;margin:0 0 46px;max-width:min(17ch,100%)
 }
 h1.hero-title em{
-  display:block;font-style:normal;
+  display:block;font-style:normal;padding-bottom:.05em;
   background:linear-gradient(92deg,var(--signal) 0%,var(--teal) 42%,var(--violet) 78%,var(--human) 100%);
   -webkit-background-clip:text;background-clip:text;color:transparent
 }
