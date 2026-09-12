@@ -129,7 +129,7 @@ h1.lead-title em{display:block;font-style:italic;color:var(--vermilion)}
 .plate:last-child{border-right:0}
 .plate svg{width:74px;height:74px;color:var(--steel);margin-bottom:16px}
 .plate h3{font-size:20px;margin:0 0 4px}
-.plate h3 a{display:inline-block;padding:10px 0}
+.plate h3 a{display:inline-block;padding:13px 0}
 .plate .label{font:11px/1.5 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:0 0 14px}
 .plate p{font-size:15.5px;color:var(--ink-2);margin-bottom:.9em}
 
