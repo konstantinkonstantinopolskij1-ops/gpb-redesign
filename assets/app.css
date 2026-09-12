@@ -147,9 +147,15 @@ h1.hero-title{
   line-height:.99;letter-spacing:-.045em;margin:0 0 46px;max-width:min(17ch,100%)
 }
 h1.hero-title em{
-  display:block;font-style:normal;padding-bottom:.05em;
+  display:block;font-style:normal;
+  /* градиент рисуется только внутри бокса: даём выносным элементам (хвост «g») место,
+     иначе background-clip:text обрезает их по краю фона */
+  padding:0 .08em .3em 0;margin-bottom:-.16em;
   background:linear-gradient(92deg,var(--signal) 0%,var(--teal) 42%,var(--violet) 78%,var(--human) 100%);
   -webkit-background-clip:text;background-clip:text;color:transparent
+}
+@supports not ((-webkit-background-clip:text) or (background-clip:text)){
+  h1.hero-title em{background:none;color:var(--signal)}
 }
 .hero .intro{font-size:clamp(16px,1.6vw,19px);color:#c9d2df;max-width:62ch}
 
