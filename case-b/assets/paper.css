@@ -189,7 +189,7 @@ h1.lead-title em{display:block;font-style:italic;color:var(--vermilion)}
 
 .plate-figure{margin:clamp(26px,4vw,44px) 0;border:1px solid var(--rule);background:var(--paper-2);box-shadow:var(--shadow)}
 .plate-figure svg{display:block;width:100%;height:auto}
-.plate-figure figcaption{padding:12px 18px;border-top:1px solid var(--rule-soft);font:11.5px/1.6 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.plate-figure figcaption{padding:12px 18px;line-height:1.75;border-top:1px solid var(--rule-soft);font:11.5px/1.6 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
 
 .columns{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:44px;align-items:start}
 .prose{font-size:17.5px;line-height:1.78;color:#20242c;max-width:var(--measure)}
@@ -294,7 +294,7 @@ p{text-wrap:pretty}
 .entry{counter-increment:entry}
 .entry .seal{position:relative}
 .entry .seal::after{content:counter(entry,decimal-leading-zero);position:absolute;right:7px;bottom:5px;
-  font:10px/1 var(--mono);letter-spacing:.14em;color:var(--ink-3)}
+  font:10px/1 var(--mono);letter-spacing:.14em;color:var(--ink-2)}
 
 /* comments numbered from the margin */
 .notes{counter-reset:note}
