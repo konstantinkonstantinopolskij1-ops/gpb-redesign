@@ -11,7 +11,7 @@
   --paper-3:#ebe4d4;
   --ink:#171a20;
   --ink-2:#3d434e;
-  --ink-3:#5b6371;
+  --ink-3:#4f5867;
   --rule:rgba(23,26,32,.20);
   --rule-soft:rgba(23,26,32,.11);
   --vermilion:#b83c1f;
@@ -173,9 +173,8 @@ h1.lead-title em{display:block;font-style:italic;color:var(--vermilion)}
 .entry h2 a{color:var(--ink);text-decoration:none}
 .entry h2 a:hover{color:var(--vermilion)}
 .entry .excerpt{font-size:15.5px;color:var(--ink-2);margin:0 0 12px;max-width:64ch}
-.entry .meta{font:11.5px/1.7 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:8px 0;margin:0}
+.entry .meta{font:11.5px/1.7 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:6px 18px;margin:0}
 .entry .meta>*{white-space:nowrap}
-.entry .meta>*+*::before{content:"·";margin:0 12px;color:var(--rule)}
 .entry .points{color:var(--vermilion);font-weight:600}
 .pager{display:flex;justify-content:center;padding:32px 0 10px}
 
@@ -184,9 +183,8 @@ h1.lead-title em{display:block;font-style:italic;color:var(--vermilion)}
 .article-head{max-width:78ch}
 .article-head .eyebrow{font:11.5px/1 var(--mono);letter-spacing:.26em;text-transform:uppercase;color:var(--vermilion);margin:0 0 18px}
 .article-head h1{font-size:clamp(32px,5.2vw,58px);line-height:1.04;letter-spacing:-.03em;margin:0 0 18px}
-.article-head .byline{font:11.5px/1.8 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:8px 0;margin:0}
+.article-head .byline{font:11.5px/1.8 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:6px 18px;margin:0}
 .article-head .byline>*{white-space:nowrap}
-.article-head .byline>*+*::before{content:"·";margin:0 12px;color:var(--rule)}
 .standfirst-serif{font-family:var(--serif);font-size:clamp(17px,1.9vw,21px);line-height:1.52;color:var(--ink-2);margin:22px 0 0;max-width:58ch}
 
 .plate-figure{margin:clamp(26px,4vw,44px) 0;border:1px solid var(--rule);background:var(--paper-2);box-shadow:var(--shadow)}
@@ -254,6 +252,7 @@ h1.lead-title em{display:block;font-style:italic;color:var(--vermilion)}
   .note-row{grid-template-columns:1fr;gap:8px}
   .tabs .tally{display:none}
   .rule-nav{gap:8px 20px}
+  .rule-nav a::after{content:""}
   .brand{letter-spacing:.14em;word-spacing:.1em}
   .ledger{grid-template-columns:1fr}
   .ledger div{border-left:0;border-top:1px solid var(--rule-soft);padding:14px 0}
