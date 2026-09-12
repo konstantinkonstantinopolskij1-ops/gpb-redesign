@@ -266,3 +266,51 @@ h1.lead-title em{display:block;font-style:italic;color:var(--vermilion)}
 }
 
 .copy-status{margin-top:14px}
+
+/* ------------------------------------------------- typed-in detail work */
+::selection{background:var(--vermilion);color:#fff}
+h1,h2,h3{text-wrap:balance}
+p{text-wrap:pretty}
+.prose{font-variant-numeric:oldstyle-nums}
+.ledger b,.entry .meta,.article-head .byline,.annex dt{font-variant-numeric:tabular-nums}
+.brand a,.plate h3 a,.entry h2 a{text-decoration:none}
+
+/* document marks: folio, ornament, footnote links */
+.orn{text-align:center;color:var(--vermilion);letter-spacing:.5em;font-size:15px;margin:30px 0 0;max-width:none}
+.fn{font-family:var(--mono);font-size:.62em;text-decoration:none;color:var(--vermilion);padding:0 .12em;vertical-align:super;line-height:0}
+.fn:hover{text-decoration:underline}
+.marginalia li:target{background:var(--vermilion-soft)}
+.annex dt a{display:inline-block;border:1px solid var(--rule);padding:2px 9px;background:var(--paper-2);text-decoration:none;color:var(--ink)}
+.annex dt a:hover{border-color:var(--vermilion);color:var(--vermilion)}
+
+/* the dispatch slip gets a tear-off perforation */
+.slip{position:relative}
+.slip::after{content:"";position:absolute;left:0;top:0;bottom:0;width:9px;
+  background-image:radial-gradient(circle,var(--rule) 1.1px,transparent 1.7px);background-size:9px 13px;background-position:0 4px}
+.stamp{transform:rotate(-5deg);mix-blend-mode:multiply}
+
+/* feed: archive numbers in the seal, printed like a plate number */
+.entries{counter-reset:entry}
+.entry{counter-increment:entry}
+.entry .seal{position:relative}
+.entry .seal::after{content:counter(entry,decimal-leading-zero);position:absolute;right:7px;bottom:5px;
+  font:10px/1 var(--mono);letter-spacing:.14em;color:var(--ink-3)}
+
+/* comments numbered from the margin */
+.notes{counter-reset:note}
+.note-row .who::before{counter-increment:note;content:counter(note) ". ";color:var(--vermilion)}
+
+@media (prefers-contrast:more){
+  :root{--rule:rgba(23,26,32,.45);--rule-soft:rgba(23,26,32,.28);--ink-2:#2a2f38;--ink-3:#3a414c}
+}
+
+@media print{
+  body{background:#fff;background-image:none;color:#000}
+  .rule-nav,.tabs,.controls,.guest-slip,.skip-link,.pager{display:none}
+  a{color:#000}
+  .slip,.plate-figure{box-shadow:none}
+  .slip::after{display:none}
+  .lead{padding-top:0}
+  .colophon{border-top:1px solid #000}
+  .entry,.note-row{break-inside:avoid}
+}
